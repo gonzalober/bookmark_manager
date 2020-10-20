@@ -8,7 +8,7 @@ As a user,
 so I can see the bookmarks that I've saved,
 I would like to see a list of bookmarks.
 
-![alt text](/../bookmark_manager/lib/assets/user_story_1.png)
+![alt text](lib/assets/user_story_1.png)
 
 # Create DATABASE
 - In order to build a database we run CREATE DATABASE routine in psql environment, called bookmark_manager.
