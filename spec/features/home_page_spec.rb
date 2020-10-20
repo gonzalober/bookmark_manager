@@ -1,5 +1,5 @@
-feature 'See Hello World on page' do
-  scenario 'Test app is running' do
+feature 'home page displays title' do
+  scenario 'test home page' do
     visit('/')
     expect(page).to have_content('BookmarkManager')
   end
