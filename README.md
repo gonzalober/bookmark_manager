@@ -18,3 +18,8 @@ I would like to see a list of bookmarks.
 # Seeting up a Testing Environment
 - We first create a database test in our case called bookmark_manager_test and then we proceed to create bookmarks table.
 
+# User Story for point 10
+As a user,
+so that I can create new bookmarks,
+I want to able to enter an url into a form and see it displayed with the rest of my bookmarks.
+
