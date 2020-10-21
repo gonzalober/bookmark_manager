@@ -15,3 +15,6 @@ I would like to see a list of bookmarks.
 - We build a table within bookmark_manager database, called bookmarks.
 - In order to keep a record of sql routines we create a folder and sub-folder called db and migrations, respectively.
 
+# Seeting up a Testing Environment
+- We first create a database test in our case called bookmark_manager_test and then we proceed to create bookmarks table.
+

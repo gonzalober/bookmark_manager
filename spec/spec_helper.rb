@@ -8,6 +8,7 @@ require File.join(File.dirname(__FILE__), '..', 'bookmark_manager.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require_relative './features/test_helper'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
