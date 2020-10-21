@@ -1,12 +1,15 @@
+require 'pg'
 class BookmarkList
 
   attr_accessor :list
 
   def initialize
-    @list = {google: "https://www.google.co.uk/", slack: "https://slack.com/intl/en-gb/"}
+    @connection
   end
 
   def all
-    @list
+    @connection = PG.connect(dbname: 'bookmark_manager')
+    result = @connection.exec("SELECT * FROM bookmarks;")
+    result.map {|bookmark| bookmark['url']}
   end
 end

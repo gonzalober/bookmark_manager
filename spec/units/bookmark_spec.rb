@@ -1,7 +1,8 @@
 describe BookmarkList do
   describe '#all' do
     it 'displays lists bookmarks' do
-      expect(subject.all).to eq({google: "https://www.google.co.uk/", slack: "https://slack.com/intl/en-gb/"})
+      bookmarks = BookmarkList.new.all
+      expect(bookmarks).to include('http://www.google.com')
     end
   end
 end

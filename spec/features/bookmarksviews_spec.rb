@@ -6,8 +6,7 @@ feature 'viewing the bookmarks route' do
 
   scenario 'shows bookmarks on page' do
     visit("/bookmarks")
-    expect(page).to have_content("google: https://www.google.co.uk/")
-    expect(page).to have_content("slack: https://slack.com/intl/en-gb/")
+    expect(page).to have_content("http://www.google.com:")
   end
 
 end
