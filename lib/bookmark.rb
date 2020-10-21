@@ -1,6 +1,7 @@
-require 'pg'
-class BookmarkList
+require "pg"
+require_relative "./connection"
 
+class BookmarkList
   attr_accessor :list
 
   def initialize
@@ -8,8 +9,8 @@ class BookmarkList
   end
 
   def all
-    @connection = PG.connect(dbname: 'bookmark_manager')
+    @connection = PG.connect(dbname: Connection.database_name)
     result = @connection.exec("SELECT * FROM bookmarks;")
-    result.map {|bookmark| bookmark['url']}
+    result.map { |bookmark| bookmark["url"] }
   end
 end
