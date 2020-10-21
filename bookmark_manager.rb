@@ -1,23 +1,23 @@
-require "sinatra/base"
-require_relative "./lib/bookmark_list"
+require 'sinatra/base'
+require_relative './lib/bookmark_list'
 
 class BookmarkManager < Sinatra::Base
-  get "/" do
+  get '/' do
     erb :index
   end
 
-  get "/bookmarks" do
+  get '/bookmarks' do
     @bookmarks = BookmarkList.all
     erb :bookmarks
   end
 
-  post "/bookmarks" do
+  post '/bookmarks' do
     @new_bookmark = params[:url_name]
     BookmarkList.create(@new_bookmark)
-    redirect "/bookmarks"
+    redirect '/bookmarks'
   end
 
-  get "/bookmarks/new" do
+  get '/bookmarks/new' do
     erb :form
   end
 
