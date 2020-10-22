@@ -13,7 +13,9 @@ feature 'the creation of new bookmarks' do
   scenario 'checks after submition that the url has been recorded' do
     visit('/bookmarks/new')
     fill_in 'bookmark_url', with: 'http://www.myspace.com'
+    fill_in 'bookmark_title'
     click_on 'Submit'
     expect(page).to have_content('http://www.myspace.com')
   end
+
 end
