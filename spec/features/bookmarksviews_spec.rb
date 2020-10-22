@@ -12,6 +12,6 @@ feature 'viewing the bookmarks route' do
   scenario 'shows bookmarks on page' do
     BookmarkList.create('http://www.facebook.com', 'face')
     visit('/bookmarks')
-    expect(page).to have_content('face')
+    expect(page).to have_link('Face', href: 'http://www.facebook.com')
   end
 end
