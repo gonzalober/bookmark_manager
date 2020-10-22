@@ -13,7 +13,7 @@ feature 'the creation of new bookmarks' do
   scenario 'checks after submition that the url has been recorded' do
     visit('/bookmarks/new')
     fill_in 'url', with: 'http://www.myspace.com'
-    fill_in 'url_title', with: 'myspace website'
+    fill_in 'url_title', with: 'myspace Title'
     click_on 'Submit'
     expect(page).to have_content('myspace Title')
   end
