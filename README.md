@@ -23,3 +23,6 @@ As a user,
 so that I can create new bookmarks,
 I want to able to enter an url into a form and see it displayed with the rest of my bookmarks.
 
+# Delete bookmarks
+- Implementation/configuration of session and method_override seetings.
+- 

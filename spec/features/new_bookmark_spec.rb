@@ -1,3 +1,5 @@
+require_relative './test_helper'
+
 feature 'the creation of new bookmarks' do
   scenario 'checks that the web reponse is succesful' do
     visit('/bookmarks/new')

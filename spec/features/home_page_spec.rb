@@ -1,3 +1,5 @@
+require_relative './test_helper'
+
 feature 'home page displays title' do
   before :each do
     clear_database

@@ -1,19 +1,22 @@
+require_relative './../features/test_helper'
+
 describe BookmarkList do
   before :each do
     clear_database
   end
-  describe '#all' do
-    it 'displays lists bookmarks' do
-      @test_connection.exec("INSERT INTO bookmarks (url, title) VALUES ('http://www.facebook.com', 'face')")
-      bookmarks = BookmarkList.all
-      expect(bookmarks).to include('face')
-    end
+
+  it 'creates and shows the bookmarks' do
+    BookmarkList.create('http://www.myspace.com', 'MySpace')
+    bookmarks = BookmarkList.all
+    bookmark = bookmarks[0]
+    expect(bookmark.url).to eq "http://www.myspace.com"
+    expect(bookmark.title).to eq "MySpace"
   end
-  describe '#create' do
-    it 'adds a new bookmark to the database' do
-      BookmarkList.create('http://www.myspace.com', 'myspace Title')
-      bookmarks = BookmarkList.all
-      expect(bookmarks).to include('myspace Title')
-    end
+    
+  it "deletes a bookmark" do
+    BookmarkList.create("http://www.myspace.com", "MySpace")
+    BookmarkList.delete(1)
+    expect(BookmarkList.all).to be_empty
   end
+
 end
